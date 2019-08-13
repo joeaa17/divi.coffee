@@ -1,0 +1,103 @@
+.btn {
+	display: inline-block;
+	color: $brown;
+
+	&.-transparent {
+		background-color: transparent;
+		border: 2px solid $brand-primary;
+		border-radius: 4px;
+	}
+
+	&.-middle {
+		font-size: 16px;
+		font-family: "Cabin";
+		font-weight: 700;
+		padding: 12px 65px;
+		letter-spacing: 3.2px;
+		text-transform: uppercase;
+	}
+
+	&.-small {
+		font-size: 16px;
+		font-family: "Cabin";
+		font-weight: 700;
+		padding: 8px 30px;
+		text-transform: none;
+		letter-spacing: inherit;
+		color: #fff;
+		border-radius: 0px;
+		min-width: 120px;
+		&:hover {
+			color: #000;
+		}
+	}
+
+	&.-black-text {
+		color: #000;
+
+		&:hover {
+			color: #fff;
+		}
+	}
+
+	&.-vertical {
+		-webkit-writing-mode: tb-rl;
+		-ms-writing-mode: tb-rl;
+		writing-mode: tb-rl;
+		transform: rotate(180deg);
+		padding: 35px 15px;
+		width: 50px;
+	}
+
+	&:hover {
+		background-color: $brand-primary;
+		color: #fff;
+	}
+
+	&:active {
+		box-shadow: none;
+		border-color: darken($brand-primary, 13%);;
+		background-color: darken($brand-primary, 13%);
+	}
+}
+
+@media only screen and (max-width: 1400px) {
+	.btn {
+		&.-vertical {
+			padding-top: 15px;
+			padding-bottom: 15px;
+			padding-left: 7px;
+			padding-right: 13px;
+			width: 41px;
+		}
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.btn {
+		&.-vertical {
+			padding: 15px 12px;
+			width: 41px;
+		}
+
+		&.-middle {
+			font-size: 14px;
+			padding: 10px 40px;
+		}
+	}
+
+}
+
+@media only screen and (max-width: 575px) {
+	.btn {
+		&.-vertical {
+			-webkit-writing-mode: initial;
+			-ms-writing-mode: initial;
+			writing-mode: initial;
+			transform: none;
+			width: auto;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+	}
+}

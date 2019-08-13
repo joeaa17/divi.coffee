@@ -1,0 +1,54 @@
+// IE SCROLLBAR OVERLAPS CONTENT
+@-ms-viewport{
+	width:auto!important;
+}
+
+.video-landing {
+	font-size: 14px;
+	color: #fff;
+	p {
+		line-height: 24px;
+	}
+}
+
+.video-landing {
+	.section {
+		padding-top: 70px;
+		padding-bottom: 70px;
+	}
+
+	.article-title {
+		font-size: 20px;
+		color: #fff;
+		margin-bottom: 10px;
+	}
+}
+
+@media only screen and (max-width: 1199px) {
+	.video-landing {
+		.section {
+			padding-top: 50px;
+			padding-bottom: 50px;
+		}
+	}
+}
+
+.add-scroll {
+	width: auto;
+	height: auto;
+	overflow-y: auto;
+	overflow: inherit;
+}
+
+.no-scroll {
+	overflow: hidden !important;
+}
+
+@media only screen and (max-width: 991px) {
+	.standart-grid, .-wide-grid {
+		.container {
+			width: 100%;
+			max-width: 100%;
+		}
+	}
+}

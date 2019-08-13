@@ -1,0 +1,33 @@
+.section-welcome{
+	&.-page_404{
+	    background-size: cover , 40% , cover;
+    	background-position: center center , center right , center;
+    	background-repeat: no-repeat;
+	}
+}
+.page_404{
+	&-block{
+		color: #fff;
+		padding-bottom: 30px;
+	}
+	&-title{
+		font-size: 150px;
+		line-height: 150px;
+		margin-bottom: 20px;
+		font-family: 'Lobster';
+	}
+	&-descr{
+		margin-bottom: 10px;
+	}
+}
+@media screen and (max-width: 400px){
+	.page_404{
+
+		&-title{
+			font-size: 100px;
+			line-height: 100px;
+
+		}
+
+	}
+}

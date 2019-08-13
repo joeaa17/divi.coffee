@@ -1,0 +1,40 @@
+.testimonials-3-items--arrows {
+	&.slick-arrow-stylization {
+		.slick-prev:before, .slick-next:before {
+			font-size: 23px;
+			color: #676261;
+			transition: 0.3s;
+		}
+
+		.slick-prev {
+			left: 15px;
+			text-align: left;
+		}
+
+		.slick-next {
+			right: 15px;
+			text-align: right;
+		}
+
+		.slick-prev, .slick-next {
+			width: 20px;
+			top: 35px;
+			transform: translate(0, 0);
+			&:hover {
+				&:before, &:before {
+					color: $brand-primary;
+					transition: 0.3s;
+				}
+			}
+		}
+
+		.slick-prev.slick-disabled,
+		.slick-next.slick-disabled {
+			&:hover {
+				&:before {
+					color: #676261;
+				}
+			}
+		}
+	}
+}

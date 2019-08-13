@@ -1,0 +1,161 @@
+.section-checkout{	
+	padding-top: 0;
+	padding-bottom: 80px;
+}
+.checkout{
+	&-title{
+		font-family: 'gilroyextrabold';
+		text-transform: uppercase;
+		font-weight: 700;
+		margin-bottom: 35px;
+	}
+	&-form{
+		& .row{
+			margin: 0 -20px;
+			margin-bottom: 15px;
+		}
+		& .col-md-6{
+			padding: 0px 20px;
+		}
+		& label{
+			font-family: "Lato";
+			font-size: 18px;
+			color: #383838;
+			margin-bottom: 10px;
+		}
+		& .form-group{
+			margin-bottom: 25px;
+		}
+		& .form-control{
+			background-color: #f1f1f1;
+			border: none;
+			box-shadow: none;
+			font-family: "Lato";
+			font-size: 18px;
+			color: #000;
+			height: 50px;
+    		padding: 15px 22px;
+			&:focus{
+				transition: all .3s;
+			    background: #fff;
+			    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.19) !important;
+			}
+		}
+		& textarea{
+			min-height: 140px;
+			resize: none;
+			max-width: 100%;
+			width: 100%;
+
+		}
+	}
+	&-submit{
+		&:before{
+			content: '';
+			display: block;
+			width: 3px;
+			height: 3px;
+			background: red;
+		}
+	}
+	&-table{
+		width: 100%;
+		& thead{
+			border-bottom: 1px solid #c4c4c4;
+		}
+		& th , td{
+			vertical-align: middle;
+			padding: 20px 10px;
+			&.text-center{
+				text-align: right;
+			}
+		}
+		& th {
+			font-family: 'gilroyextrabold';
+			font-size: 18px;
+			text-transform: uppercase;
+		}
+		& tbody{
+			& tr {
+				border-bottom: 1px solid rgba(196,196,196 , .4);
+			}
+		}
+		&_product{
+			&-title{
+				font-size: 17px;
+				font-family: 'Lato';
+				font-weight: 700;
+				text-transform: uppercase;
+				color: #000;
+				display: block;
+				margin-bottom: 5px;
+			}
+			&-subtitle{
+				font-size: 17px;
+				font-family: 'Lato';
+				color: #010101;
+				display: block;
+			}
+		}
+		&_price{
+			font-size: 18px;
+			font-family: 'Lato';
+			display: block;
+			text-transform: uppercase;
+			font-weight: 700;
+
+		}
+	}
+	&-total{
+		margin-top: 30px;
+		margin-bottom: 65px;
+		&_title{
+			font-family: 'gilroyextrabold';
+			float: left;
+			text-transform: uppercase;
+		}
+		&_price{
+			text-transform: uppercase;
+			float: right;
+			font-size: 22px;
+			font-family: 'gilroyextrabold';
+		}
+	}
+}
+@media screen and (max-width: 991px){
+	.section-checkout{	
+		padding-top: 0;
+		padding-bottom: 80px !important;
+	}	
+	
+}
+@media screen and (max-width: 600px){
+	.checkout{
+		&-title{
+			font-size: 20px;
+		}
+		&-table{
+			& th , td{
+				padding: 20px 5px;
+			}
+			& th {
+				font-size: 16px;
+			}
+			&_product{
+				&-title{
+					font-size: 15px;
+
+				}
+				&-subtitle{
+					font-size: 15px;
+					font-family: 'Lato';
+					color: #010101;
+					display: block;
+				}
+			}
+			&_price{
+				font-size: 15px;
+			}
+		}
+	}
+}

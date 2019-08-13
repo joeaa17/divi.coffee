@@ -1,0 +1,108 @@
+.comment{
+	&-item{
+		border-bottom: 1px solid rgba(196, 196, 196, 0.4);
+	    padding-bottom: 20px;
+    	margin-bottom: 30px;
+	}
+	&-title{
+	    font-family: 'Lato', sans-serif;
+    	font-weight: 700;
+    	font-size: 22px;
+    	margin-bottom: 20px;
+	}
+	&-rating_box{
+		float: left;
+		max-width: 200px;
+		width: 100%;
+		margin-right: 25px;
+	}
+	&-content_box{
+		overflow: hidden;
+	}
+	&-rating{
+		display: inline-block;
+		&_title{
+			display: inline-block;
+			margin-right: 10px;
+		}
+		& i {
+			font-size: 15px;
+		}
+	}
+	&-detail{
+		font-family: 'Lato', sans-serif;
+		font-size: 18px;
+	}
+	&-descr{
+		margin-bottom: 20px;
+	}
+	&-author{
+		margin-bottom: 5px;
+	}
+	&-form{
+		max-width: 80%;
+		padding: 30px 0;
+		margin: 0 auto;
+		&_title{
+		    font-family: 'Lato', sans-serif;
+    		font-weight: 900;
+    		margin-bottom: 20px;
+		}
+		& label{
+			font-family: 'Lato', sans-serif;
+    		font-weight: 700;
+			font-size: 18px;
+		}
+		& .form-control{
+			background-color: #f1f1f1;
+		    border: none;
+		    box-shadow: none;
+		    font-family: "Lato";
+		    font-size: 18px;
+		    color: #000;
+		    height: 50px;
+		    margin-left: 25px;
+		    padding: 15px 22px;
+		    &:focus{
+	    	    transition: all .3s;
+   				background: #fff;
+    			box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.19) !important;
+		    }
+		}
+		&_rating{
+			margin-left: 25px;
+			padding: 5px 0;
+			font-size: 18px;
+		}
+		& textarea{
+		    min-height: 140px;
+		    resize: none;
+		    max-width: 100%;
+		    width: 100%;
+		}
+		& input[type="submit"]{
+			margin-left: 25px;
+		}
+	}
+}
+@media screen and (max-width: 767px){
+	.comment{
+		&-rating_box{
+			float: none;
+			max-width: 100%;
+			margin-bottom: 15px;
+		}
+		&-form{
+			max-width: 100%;
+			& .form-control{
+				margin-left: 0px;
+			}
+			& input[type="submit"]{
+				margin-left: 0;
+			}
+			&_rating{
+				margin-left: 0;
+			}
+		}
+	}
+}

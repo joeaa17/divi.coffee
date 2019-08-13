@@ -1,0 +1,28 @@
+.section-home-7 {
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+
+.opacity-0 {
+	opacity: 0 !important;
+}
+
+.title-section-wrap {
+	overflow: hidden;
+}
+
+@media only screen and (max-width: 767px) {
+
+	.section-home-7 {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+}
+
+@media only screen and (max-width: 575px) {
+
+	.section-home-7 {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+}

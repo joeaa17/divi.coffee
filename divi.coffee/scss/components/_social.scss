@@ -1,0 +1,94 @@
+.social{
+	margin-top: 35px;
+	&.-col4{
+		& .social-row{
+			margin: 0 -12px;
+		}
+	}
+	& .social-row{
+		margin: 0 -10px;
+	}
+	&-item{
+		height: 0;
+	    padding-bottom: 68.25%;
+	    position: relative;
+	    margin: 0 10px;
+	    margin-top: 20px;
+		& .img {
+			position: absolute;
+		    left: 0;
+		    right: 0;
+		    top: 0;
+		    bottom: 0;
+		    width: 100%;
+		    height: 100%;
+		    background-size: cover;
+		    background-position: center center;
+		}
+	}
+}
+.social{
+	&.-landing{
+		text-align: right;
+		margin-left: 7%;
+	    position: relative;
+	    margin-right: 8%;
+	    margin-top: 1%;
+	    & .social-item{
+	    	padding-bottom: 90%;
+	    }
+	}
+	&-img-box{
+		background: #fff;
+		box-shadow: 0 3px 32px rgba(0, 0, 0, 0.24), 0 0 40px rgba(0, 0, 0, 0.11);
+	    max-width: 59%;
+	    width: 100%;
+	    padding: 4% 7% 4% 7%;
+	    position: relative;
+	}
+	&-content{
+		position: absolute;
+		top: 20px;
+		bottom: 20px;
+		right: 0;
+		background: #fff;
+		box-shadow: 0 3px 32px rgba(0, 0, 0, 0.24), 0 0 40px rgba(0, 0, 0, 0.11);
+	    max-width: 43%;
+	    // position: relative;
+	    // padding: 9% 3% 10% 11%;
+	    text-align: left;
+	    &-inner{
+		    display: table;
+		    width: 100%;
+	    	height: 100%;
+	    }
+	    &-align{
+	    	display: table-cell;
+	    	vertical-align: middle;
+	    	padding: 30px 20%;
+	    }
+	}
+	&-descr{
+		margin-bottom: 50px;
+	}
+}
+@media screen and (max-width: 991px){
+	.social{
+		margin-top: 30px;
+	}
+	.section-social{
+		& a.pull-right{
+			float: none !important;
+		}
+	}
+}
+@media screen and (max-width: 767px){
+	.social{
+		&-item{
+			& img {
+				max-width: 100%;
+				width: 100%;
+			}
+		}
+	}
+}

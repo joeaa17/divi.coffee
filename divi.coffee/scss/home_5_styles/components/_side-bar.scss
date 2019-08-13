@@ -1,0 +1,188 @@
+[canvas=container] {
+	background-color: transparent;
+}
+
+.custom-sidebar-width {
+	width: 350px;
+	background-image: url(../img/side-bar-bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	-webkit-transition-duration: 400ms;
+	transition-duration: 400ms;
+}
+
+.modal-close-with-stick {
+	font-size: 20px;
+	a {
+		color: #fff;
+		&:hover {
+			color: $brand-primary;
+		}
+	}
+
+	&:after {
+		content: '';
+		width: 2px;
+		height: 60px;
+		background-color: $brand-primary;
+		display: inline-block;
+		position: absolute;
+		top: 35px;
+		left: 50%;
+	}
+}
+
+.-white-sidebar {
+	background-image: url(img/bg-body_wood_bg.png);
+	background-color: #fff;
+	color: #000;
+	border-left: 2px solid #250D04;
+	.section-title {
+		color: #000;
+	}
+
+	.modal-close-with-stick {
+		a {
+			color: #000;
+			&:hover {
+				color: $brand-primary;
+			}
+		}
+		&:after {
+			background-color: #000;
+		}
+	}
+
+	.reservation-descr {
+		color: #666;
+	}
+
+	.form-modal {
+		label {
+			color: #000;
+		}
+	}
+
+	.form-control {
+		color: #000;
+		background-color: rgba(#000, 0.1);
+		border: none;
+		@include placeholder-color(#ACACAC);
+	}
+
+	.reservation-call {
+		color: #666;
+		span {
+			color: #000;
+		}
+	}
+
+	.btn-primary {
+		color: #000;
+		&:hover {
+			color: #000;
+			border-color: #000;
+			background-color: lighten($brand-primary, 5%);
+		}
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.modal-close-with-stick {
+		font-size: 25px;
+	}
+}
+
+.side-bar-wrap {
+	padding: 50px 20px 20px;
+	position: relative;
+
+	.modal-close {
+		right: auto;
+		left: 20px;
+		top: 20px;
+	}
+
+	.section-title {
+		padding-left: 0;
+		text-align: right;
+		margin-bottom: 10px;
+		&:after {
+			display: none;
+		}
+	}
+
+	.form-modal {
+		text-align: right;
+		max-width: 260px;
+		margin-left: auto;
+		margin-bottom: 20px;
+		label {
+			font-size: 14px;
+		}
+
+		.form-control {
+			font-size: 14px;
+			height: 40px;
+			padding: 10px 20px;
+		}
+
+		.btn {
+			padding-top: 8px;
+			padding-bottom: 8px;
+		}
+
+		textarea.form-control {
+			height: 230px;
+			resize: none;
+			overflow: hidden;
+		}
+	}
+
+}
+
+.hide-reservation-btn {
+	opacity: 0;
+	visibility: hidden;
+}
+
+@media only screen and (max-width: 1199px) {
+	.side-bar-wrap {
+		.form-modal {
+			max-width: 100%;
+		}
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.custom-sidebar-width {
+		width: 300px;
+	}
+
+	.side-bar-wrap {
+		padding-top: 30px;
+		.modal-close {
+			top: 10px;
+		}
+	}
+
+}
+
+@media only screen and (max-width: 575px) {
+	.custom-sidebar-width {
+		width: 270px;
+	}
+
+	.side-bar-wrap {
+		padding-left: 15px;
+		padding-right: 15px;
+		.modal-close {
+			left: 15px;
+		}
+
+		.form-modal .btn {
+			margin-top: 15px;
+		}
+	}
+}

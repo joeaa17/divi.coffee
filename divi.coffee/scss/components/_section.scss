@@ -1,0 +1,458 @@
+.wrapper-content{
+	  height: 100%;
+	  width: 100%;
+	  margin: 0;
+	  min-width: 320px;
+	  margin: 0 auto;
+	  &.-min_height100{
+	  	min-height: 100%;
+	  	height: initial;
+	  	width: 100%;
+	  	position: relative;
+	  }
+	  &.-sidebar{
+	  	padding-left: 190px;
+	  }
+	  &.-landing{
+	  	max-width: 1750px;
+	  	margin: 0 auto;
+	  	margin-top: 100px;
+	  	margin-bottom: 170px;
+	  	height: auto;
+		&:before{
+			content: '';
+			position: absolute;
+			background: #1d2d40;
+			max-width: 69%;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			top: 0;
+			box-shadow: 0 16px 28px rgba(0, 0, 0, 0.22), 0 30px 55px rgba(0, 0, 0, 0.55);
+			margin: 0 auto;
+			z-index: -1;
+		}
+	  }
+	  // height: auto;
+}
+.section{
+	position: relative;
+	overflow: hidden;
+	padding: 80px 0;
+	&.-pd_bot_0.-pd_bot_0.-pd_bot_0{
+		padding-bottom: 0;
+	}
+	&.-pd_top_0.-pd_top_0.-pd_top_0{
+		padding-top: 0;
+	}
+	&.-landing{
+		overflow: inherit;
+	}
+	&-title_top{
+		text-align: center;
+		height: 450px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+		background-attachment: fixed;
+		display: table;
+		width: 100%;
+		padding: 50px 0;
+		& .container-fluid{
+			display: table-cell;
+			vertical-align: middle;
+		}
+	}
+	&-title{
+		position: relative;
+		padding-bottom: 35px;
+		&.-black{
+			color: #000;
+		}
+		&.-white{
+			color: #fff;
+		}
+		&.-landing{
+			padding-bottom: 40px;
+			& h2 {
+				font-size: 51px;
+				
+			}
+			&:after{
+				width: 113px;
+				height: 3px;
+				margin-top: 30px;
+			}
+		}
+		&:after{
+			content: '';
+			display: block;
+			width: 115px;
+			height: 8px;
+			margin-top: 15px;
+			background: $brand-primary;
+		}
+	}
+	&.-overlay_title200{
+		& .section-overlay-title{
+			& span{
+				font-size: 200px;
+			}
+		}
+	}
+	&.-overlay-titlelt10{
+		& .section-overlay-title{
+			left: 10%;
+		}
+	}
+	&-overlay-title{
+		position: absolute;
+		top: 20px;
+		padding-left: 4%;
+		z-index: -1;
+		&.-nowrap{
+			white-space: nowrap;
+		}
+		&.-pd-lt-33{
+			padding-left: 33%;
+		}
+		&.-tp-20{
+			top: -20px;
+		}
+		& span{
+			font-size: 247px;
+		    font-family: "Lobster";
+			color: #dedede;
+			opacity: 0.4;
+			line-height: 230px;
+		}
+	}
+	&-descr{
+		max-width: 490px;
+		width: 100%;
+		display: inline-block;
+		margin-bottom: 10px;
+	}
+	&.-full-height{
+		height: 100%;
+  		width: 100%;
+	}
+	&.-bg{
+		background-image: linear-gradient(to top , rgba(0,0,0, 0.5) 0%, rgba(0,0,0,0.5) 100%) ,  url(img/img-second_bg.jpg);
+		background-size: cover;
+		background-position: center center;
+		background-attachment: fixed;
+	}
+	&.-white{
+		color: #fff;
+	}
+	&-welcome{
+		// position: relative;
+		& .content{
+			position: absolute;
+			top: 50%;
+			z-index: 1;
+			transform: translateY(-50%);
+			left: 0;
+			right: 0;
+			text-align: center;
+			padding: 30px 0;
+		}
+		background-attachment: fixed;
+		background-size: cover;
+		background-position: center center;
+		& .logo-center{
+			margin-bottom: 30px;
+			& img {
+				max-width: 575px;
+				width: 100%;
+				padding: 0 15px;
+			}
+		}
+	}
+	&-about{
+		position: relative;
+		&.-float-img{
+			overflow: hidden;
+			& .-pdbot100{
+				padding-bottom: 100px;
+			}
+		}
+	}
+	&-gallery{
+		position: relative;
+		padding-bottom: 0;
+	}
+	&-menu{
+		overflow: hidden;
+		position: relative;
+		background-size: 30% 100%;
+	    background-position: left;
+	    background-repeat: no-repeat;
+	}
+	&-contacts{
+		&.-half{
+			padding: 0;
+		}
+		&.-overlay-block{
+			padding-top: 0px;
+		}
+	}
+}
+.section.-landing{
+	&.section-about{
+		padding: 100px 0;
+		padding-bottom: 200px;
+	}
+	&.section-reservation{
+		padding: 150px 0;
+	}
+	&.section-gallery{
+		padding: 200px 0;
+	}
+	&.section-menu{
+		padding: 200px 0;
+	}
+	&.section-review{
+		padding: 200px 0;
+	}
+	&.section-social{
+		padding: 200px 0;
+	}
+	&.section-shop{
+		padding: 200px 0;
+	}
+	&.section-contacts{
+		padding: 200px 0;
+		padding-bottom: 100px;
+	}
+}
+.section-overlay_block{
+    opacity: 0.9;
+    // width: 100%;
+    position: absolute;
+    box-shadow: 0 3px 32px rgba(0, 0, 0, 0.43), 0 21px 40px rgba(0, 0, 0, 0.58);
+	&.-about{
+	    background-color: #8f9533;
+	    min-height: 700px;
+	    top: 0;
+	    left: 7%;
+	    right: 12.5%;
+	}
+	&.-reservation{
+	    min-height: 650px;
+	    background-color: #fbd255;
+	    top: 8%;
+	    left: 10%;
+	    right: 4%;
+	}
+	&.-gallery{
+	    min-height: 734px;
+	    background-color: #943d36;
+	    left: 11%;
+	    top: -3%;
+	    right: 0;
+	}
+	&.-menu{
+		min-height: 815px;
+	    background-color: #8f6b4f;
+	    top: -15%;
+	    left: 11.5%;
+	    right: 45px;
+	}
+	&.-review{
+		min-height: 750px;
+		background-color: #929839;
+		left: 8%;
+    	right: 10%;
+    	top: -12%;
+	}
+	&.-social{
+		min-height: 620px;
+		background-color: #fbd255;
+	    left: 11%;
+	    right: 3%;
+	    top: -7%;
+	}
+	&.-shop{
+	    background-color: #943d36;
+	    min-height: 630px;
+	    left: 10%;
+	    right: 3%;
+	}
+	&.-contacts{
+		background-color: #8c9234;
+	    min-height: 820px;
+	    left: 10%;
+	    right: 4%;
+	    top: -7%;
+	}
+}
+@media screen and (max-height: 700px){
+	.section{
+		&-title{
+			&.-landing{
+				&:after{
+					margin-top: 20px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1400px){
+	.section{
+		&.-overlay_title200{
+			& .section-overlay-title{
+				& span{
+					font-size: 150px;
+					line-height: 150px;
+				}
+			}
+		}
+		&-overlay-title{
+			& span{
+				font-size: 200px;
+				line-height: 200px;
+			}
+		}
+		&-gallery{
+			padding-top: 80px;
+			& .section-overlay-title{
+				top: 0;
+			}
+		}
+		&-reservation.-transparent.-transparent{
+			padding-bottom: 0;
+		}
+	}
+	.section{
+		&.section-contacts.-half{
+			& .section-overlay-title{
+				& span{
+					font-size: 110px;
+					line-height: 110px;
+				}
+			}
+		}
+	}
+	.section-overlay_block{
+		&.-about{
+		    min-height: 600px;
+		}
+		&.-reservation{
+		    min-height: 550px;
+
+		}
+		&.-gallery{
+		    min-height: 550px;
+
+		}
+		&.-menu{
+			min-height: 700px;
+
+		}
+		&.-review{
+			min-height: 650px;
+		}
+		&.-social{
+			min-height: 500px;
+
+		}
+		&.-shop{
+		    min-height: 500px;
+		}
+		&.-contacts{
+		    min-height: 700px;
+
+		}
+	}
+}
+@media screen and (max-width: 991px){
+	.section{
+		&-title{
+			padding-bottom: 25px;
+		}
+		&-title_top{
+			background-attachment: inherit;
+		}
+		&-welcome{
+			background-attachment: inherit;
+		}
+		&.-bg{
+			background-attachment: inherit;
+		}
+	}
+	.section-welcome {
+		& .content{
+			min-height: 300px;
+		}
+	}
+	.section-welcome .logo-center img{
+		max-width: 375px;
+	}
+	.section{
+		&.section-menu{
+			background-image: none !important; 
+		}
+		&.section.section{
+			padding: 30px 0;
+		}
+		&-overlay-title{
+			display: none;
+		}
+	}
+	.section.-landing{
+		padding: 50px 0 !important;
+	}
+	.section{
+		&-title{
+			&.-landing{
+				padding-bottom: 20px;
+				& h2 {
+					font-size: 45px;
+
+				}
+				&:after{
+					margin-top: 20px;
+				}
+			}
+		}
+	}
+	.wrapper-content{
+		&.-landing{
+			margin: 0;
+			&:before{
+				display: none;
+			}
+		}
+		&.-sidebar{
+		  	padding-left: 0px;
+		 }
+	}
+	.section-overlay_block{
+		display: none;
+	}
+	.section{
+		&-descr{
+			max-width: 100%;
+			width: 100%;
+			margin-bottom: 15px;
+		}
+
+	}
+}
+@media screen and (max-width: 767px){
+	.section-welcome .logo-center img{
+		padding: 0 50px;
+	}
+	.section{
+		&-title{
+			&.-landing{
+				& h2 {
+					font-size: 40px;
+				}
+			}
+		}
+	}
+}

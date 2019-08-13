@@ -1,0 +1,46 @@
+/* Стилизация полосы прокрутки ================== */
+
+$main: #000;
+
+::-webkit-scrollbar-button {
+	background-image: url ('');
+	background-repeat: no-repeat;
+	width: 6px;
+	height: 0px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: $main; // Цвет дорожки, по которой двигается бегунок прокрутки
+	box-shadow: 0px 0px 3px #000 inset;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 2px; // Закругление бегунка
+	background-color: $brand-primary; // Цвет бегунка
+	background-image: url("../img/icon_for_scroll.png");
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: lighten($brand-primary, 10%); // Цвет бегунка при наведении на него курсора
+}
+
+::-webkit-resizer {
+	background-image: url('');
+	background-repeat: no-repeat;
+	width: 7px;
+	height: 0px;
+}
+
+::-webkit-scrollbar {
+	width: 8px; // Основная ширина полосы прокрутки
+}
+
+// For Internet Explorer
+body {
+	scrollbar-face-color: $brand-primary;
+	scrollbar-track-color: $main;
+	scrollbar-shadow-color: $brand-primary;
+	scrollbar-arrow-color: $brand-primary;
+}

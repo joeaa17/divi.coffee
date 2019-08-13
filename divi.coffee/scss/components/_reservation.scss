@@ -1,0 +1,319 @@
+.section-reservation{
+	&.-dark{
+		overflow: inherit;
+		padding: 0 !important;
+		& .container-fluid{
+			background: #25150d;
+			
+		}
+		& .form-control[disabled], & .form-control[readonly], & fieldset[disabled] .form-control {
+			background-color: rgba(255, 255, 255, 0.08);
+			color: #fff;
+		}
+	}
+	&.-image_bg{
+	    background-size: cover;
+	    background-position: center center;
+	    background-attachment: fixed;
+	}
+	&.-transparent{
+
+		& .form-control-wrapper{
+			&.-icon{
+				position: relative;
+				& .icon-wrapper{
+					position: absolute;
+					right: 10px;
+					top: 50%;
+					transform: translateY(-50%);
+				}
+				& .form-control{
+					padding-right: 30px;
+				}
+			}
+
+		}
+		& label{
+			color: #8b8b8b;
+		}
+		& .form-control{
+			background: #f0f0f0;
+			border: 0;
+			box-shadow: none;
+			color: #000;
+			transition: all .3s;
+			&:focus{
+				transition: all .3s;
+				background: #fff;
+				box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.19) !important;
+
+			}
+		}
+		& .bootstrap-select .btn-default{
+			background: #f0f0f0;
+		}
+		& .input-group.date .input-group-addon{
+			background: #f0f0f0;
+			& i {
+				color: #000;
+			}
+		}
+		& .bootstrap-select .caret{
+			color: #000;
+		}
+		& .reservation{
+			color: #000;
+			&.-pd_top_0{
+				padding-top: 0;
+			}
+			&-item{
+				margin: 0;
+			}
+			&-content{
+				& .row {
+					& .col-md-6{
+						min-height: 90px;
+					}
+					& .col-md-6:nth-child(odd){
+						padding-right: 20px;
+					}
+				}
+				& .form-group{
+					margin-bottom: 10px;
+				}
+			}
+		}
+		& .reservation-descr_bot{
+			text-align: center;
+		}
+		& .reservation-img{
+			    height: 0;
+			    padding-bottom: 70%;
+			    overflow: hidden;
+			    position: relative;
+			& .img{
+				position: absolute;
+			    left: 0;
+			    right: 0;
+			    top: 0;
+			    bottom: 0;
+			    width: 100%;
+			    height: 100%;
+			    background-size: cover;
+			    background-position: center center;
+			}
+		}
+	}
+}
+#reservation_date , #reservation_time{
+	& input {
+		cursor: pointer;
+	}
+}
+
+.reservation{
+	padding: 20px 0 30px 0;
+	color: #fff;
+	&-title{
+		text-align: center;
+		& h2 {
+			margin-bottom: 5px;
+		}
+		& p {
+			margin-bottom: 30px;
+		}
+	}
+	&-content{
+		text-align: center;
+	}
+	&-item{
+		vertical-align: top;
+		max-width: 265px;
+		width: 100%;
+		display: inline-block;
+		margin: 0 45px;
+		&.-submit{
+			margin-top: 10px;
+	    	max-width: 100%;
+	    	margin-left: 0;
+	    	margin-right: 0;
+	    	& .form-group{
+    		    max-width: 265px;
+			    margin: 0 auto;
+			    margin-bottom: 15px;
+	    	}
+		}
+	}
+	&-descr_bot{
+		text-align: center;
+	}
+	& .form-group{
+		text-align: left;
+	}
+}
+
+.reservation{
+	position: relative;
+	&.-landing{
+		text-align: right;
+		padding: 0;
+	    max-width: 88%;
+    	margin-left: 4%;
+		& .section-title{
+			padding-bottom: 55px;
+		}
+		& .reservation{
+			&-item{
+				margin: 0;
+				max-width: 100%;
+				&.-submit{
+					& .form-group{
+						text-align: center;
+						margin-top: 35px;
+						border: none;
+					}
+				}
+			}
+		}
+		& label{
+			font-size: 13px;
+			color: #8b8b8b;
+			text-transform: uppercase;
+			margin-bottom: 5px;
+			margin-left: 14px;
+		}
+		& .form-group{
+			margin-bottom: 25px;
+			border-bottom: 1px solid rgba(217,217,217 , .6);
+			& .input-group-addon , & .bootstrap-select .caret {
+				color: #000;
+			}
+		}
+		& .form-control{
+			color: #000;
+			box-shadow: none;
+			border: none;
+			background: transparent;
+		}
+	}
+	&-landing-bg_wrapper{
+		display: inline-block;
+		width: 47.5%;
+		position: absolute;
+		left: 3%;
+		top: -30px;
+		bottom: -30px;
+		box-shadow: 0 3px 32px rgba(0, 0, 0, 0.24), 0 0 40px rgba(0, 0, 0, 0.11);
+
+
+	}
+	&-landing-bg{
+	    height: 0;
+	    position: relative;
+	    overflow: hidden;
+	    // padding-bottom: 48%;
+	    height: 100%;
+		& .img{
+		    position: absolute;
+		    left: 0;
+		    right: 0;
+		    top: 0;
+		    bottom: 0;
+		    width: 100%;
+		    height: 100%;
+		    background-size: cover;
+		    background-position: center center;
+		}
+	}
+	&-lading-form_wrapper{
+		padding: 3.4% 4.4% 1% 6.2%;
+		display: inline-block;
+		width: 51%;
+		background: #fff;
+		box-shadow: 0 3px 32px rgba(0, 0, 0, 0.24), 0 0 40px rgba(0, 0, 0, 0.11);
+		& [class*="col-"] {
+			padding: 0 20px;
+		}
+		& .row{
+			margin: 0 -20px;
+		}
+	}
+}
+.dropup  .caret{
+	border-top: 0 !important;
+}
+.dropup .caret.caret{
+    border-bottom: 6px dashed !important;
+}
+
+
+
+@media screen and (max-width: 1200px){
+	.section-reservation.-image_bg{
+		padding: 50px 0;
+	}
+}
+@media screen and (max-width: 991px){
+	.section-reservation.-image_bg{
+		background-attachment: inherit;
+	}
+	.section-reservation.-transparent {
+		& .reservation-descr_bot{
+			margin-top: 10px;
+		}
+
+	}
+	.reservation{
+		&.-landing{
+			margin:  0 ;
+			max-width: 100%;
+			& .form-control{
+				font-size: 13px;
+			}
+			& label{
+				margin-left: 0;
+			}
+			& .form-group{
+				margin-bottom: 15px;
+			}
+			& .reservation-item.-submit .form-group{
+				margin-top: 15px;
+			}
+
+		}
+		&-landing-bg_wrapper{
+			display: none;
+		}
+		&-lading-form_wrapper{
+			max-width: 100%;
+			width: 100%;
+			padding: 30px;
+		}
+	}
+}
+
+@media screen and (max-width: 767px){
+	.section-reservation.-transparent {
+		& .reservation-content {
+			& .row .col-md-6:nth-child(odd){
+				padding: 0;
+			}
+		}
+	}
+	.reservation{
+		&-item{
+			max-width: 100%;
+			width: 100%;
+			margin: 0;
+		}
+	}
+	.reservation{
+		&.-landing{
+
+		}
+
+		&-lading-form_wrapper{
+			padding: 15px;
+		}
+	}
+}

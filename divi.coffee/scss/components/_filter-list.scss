@@ -1,0 +1,37 @@
+.filter-list{
+	&_main_link{
+		font-weight: 400;
+	}
+	& a {
+		display: block;
+		color: #000;
+		font-family: 'Lato';
+		padding: 10px 0;
+		position: relative;
+		font-size: 18px;
+		&:hover{
+			text-shadow:  0px 0 0 #000 , 1px 0 0 #000 ;
+		}
+		&[aria-expanded="true"]{
+			// font-weight: 700;
+			text-shadow:  0px 0 0 #000 , 1px 0 0 #000 ;
+			& > i {
+				transform: rotate(90deg);
+				transition: all .3s;
+			}
+		}
+		& i {
+		    position: absolute;
+		    left: 170px;
+		    line-height: 27px;
+			transition: all .3s;
+			transform: rotate(0deg);
+		}
+	}
+	& .sub-menu{
+		padding-left: 15px;
+	}
+	& .sub-menu_2{
+		padding-left: 15px;
+	}
+}

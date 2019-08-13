@@ -1,0 +1,75 @@
+@mixin placeholder-color($color) {
+	&:-moz-placeholder,
+	&::-moz-placeholder {
+		color: $color;
+		opacity: 1;
+	}
+	&::-webkit-input-placeholder {
+		color: $color;
+	}
+	&:-ms-input-placeholder {
+		color: $color;
+	}
+}
+
+@mixin placeholder-opacity($time) {
+	&::-webkit-input-placeholder       { opacity: 1; transition: opacity $time ease; }
+	&::-moz-placeholder                { opacity: 1; transition: opacity $time ease; }
+	&:-moz-placeholder                 { opacity: 1; transition: opacity $time ease; }
+	&:-ms-input-placeholder            { opacity: 1; transition: opacity $time ease; }
+	&:focus::-webkit-input-placeholder { opacity: 0; transition: opacity $time ease; }
+	&:focus::-moz-placeholder          { opacity: 0; transition: opacity $time ease; }
+	&:focus:-moz-placeholder           { opacity: 0; transition: opacity $time ease; }
+	&:focus:-ms-input-placeholder      { opacity: 0; transition: opacity $time ease; }
+}
+
+.form-modal {
+	padding-top: 25px;
+	label {
+		font-size: 16px;
+		font-weight: 700;
+		color: #fff;
+	}
+
+	.form-group:last-child {
+		margin-bottom: 40px;
+	}
+
+	.form-control {
+		height: 50px;
+		padding: 15px 20px;
+		font-size: 16px;
+		@include placeholder-color(#bbbbbb);
+		@include placeholder-opacity(0.5s);
+		&:focus {
+			border-color: $brand-primary;
+			outline: 0;
+			box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba($brand-primary, 0.6);
+		}
+	}
+
+	textarea.form-control {
+		height: 230px;
+		resize: none;
+		overflow: hidden;
+	}
+
+	.btn {
+		margin-top: 25px;
+		width: 100%;
+		color: #fff;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		&:hover {
+			color: $brown;
+		}
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.form-modal {
+		.form-control {
+			padding: 15px;
+		}
+	}
+}

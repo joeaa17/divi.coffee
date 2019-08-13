@@ -1,0 +1,39 @@
+.footer{
+	background: #25150d;
+	color: #fff;
+    padding: 14px 0;
+    font-size: 14px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    &.-sticky{
+    	bottom: 0;
+    }
+	&.-landing{
+		background: transparent;
+		text-align: center;
+		position: relative;
+		z-index: 5;
+		padding: 0;
+		padding-bottom: 50px;
+		left: inherit;
+		right: inherit;
+	}
+	&.-abs_bot{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+	}
+	&.-sidebar{
+		padding-left: 190px;
+	}
+}
+@media screen and (max-width: 991px){
+	.footer{
+		&.-sidebar{
+			padding-left: 0;
+		}
+	}
+}

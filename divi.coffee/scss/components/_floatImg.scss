@@ -1,0 +1,114 @@
+.float-img{
+	position: relative;
+	&.-abs{
+		position: absolute;
+		z-index: 99;
+	}
+	& img {
+		display: block;
+		width: 100%;
+	}
+	&.pd-tp65{
+		padding-top: 65px;
+	}
+	&.-lg{
+		// max-width: 630px;
+		width: 100%;
+		padding-bottom: 47%;
+		height: 0;
+		overflow: hidden;
+		position: relative;
+		&.-center-left{
+			right: 30px;
+
+		}
+		&.-center-right{
+			left: 10px;
+		}
+	}
+	&.-md{
+		max-width: 450px;
+		width: 100%;
+		padding-bottom: 36%;
+		height: 0;
+		overflow: hidden;
+		&.-left{
+		    left: -450px;
+			top: -120px;		
+		}
+		&.-right-bot{
+		    bottom: -195px;
+    		right: -180px;
+
+		}
+	}
+	&.-sm{
+		max-width: 270px;
+		width: 100%;
+		padding-bottom: 25.5%;
+		height: 0;
+		overflow: hidden;
+		&.-right-top{
+	        top: -35px;
+    		right: -102px;
+		}
+	}
+}
+
+@media screen and (max-width: 1400px){
+	.float-img{
+		&.-md{
+
+			&.-left{
+		       left: -350px;
+	    		top: -90px;		
+			}
+			&.-right-bot{
+			   bottom: -150px;
+	    		right: -180px;
+
+			}
+		}
+	}
+}
+@media screen and (max-width: 1100px){
+	.float-img{
+		&.-md{
+			max-width: 350px;
+			&.-left{
+		       left: -250px;		
+			}
+			&.-right-bot{
+		       bottom: -110px;
+    			right: -180px;
+
+			}
+		}
+		&.-sm{
+			max-width: 250px;
+			&.-right-top{
+	            top: 0px;
+    			right: -100px;
+			}
+		}
+	}
+}
+@media screen and (max-width: 991px){
+	.float-img{
+		&.-lg{
+			max-width: 100%;
+			width: 100%;
+			position: static;
+		}
+		&.-md{
+			display: none;
+
+		}
+		&.-sm{
+			display: none;
+		}
+		&.pd-tp65{
+			padding-top: 0px;
+		}
+	}
+}

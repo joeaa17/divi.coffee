@@ -1,0 +1,60 @@
+.section-title {
+	&.-side-stick-big {
+		font-size: 50px;
+		color: #fff;
+		margin-bottom: 25px;
+		padding-bottom: 0;
+		position: relative;
+		color: #000;
+		z-index: 2;
+		&:after {
+			display: none;
+		}
+	}
+}
+
+.title-wrap {
+	position: relative;
+	z-index: 1;
+	&:after {
+		content: "";
+		display: inline-block;
+		position: absolute;
+		left: -15px;
+		top: 30px;
+		height: 30px;
+		width: 180px;
+		background-color: $brand-primary;
+	}
+}
+
+@media only screen and (max-width: 991px) {
+	.section-title {
+		&.-side-stick-big {
+			font-size: 40px;
+			margin-bottom: 20px;
+		}
+	}
+
+	.title-wrap {
+		&:after {
+			top: 25px;
+			height: 20px;
+			width: 130px;
+		}
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.section-title {
+		&.-side-stick-big {
+			font-size: 35px;
+		}
+	}
+
+	.title-wrap {
+		&:after {
+			height: 15px;
+		}
+	}
+}

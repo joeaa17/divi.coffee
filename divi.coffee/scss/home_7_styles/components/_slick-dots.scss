@@ -1,0 +1,16 @@
+.custom-slick-dots {
+	.slick-dots {
+		li.slick-active button {
+			background-color: $brand-primary;
+		}
+		li button {
+			width: 15px;
+			height: 15px;
+			background-color: rgba($brand-primary, 0.4);
+			border-radius: 50%;
+			&:before {
+				content: "";
+			}
+		}
+	}
+}

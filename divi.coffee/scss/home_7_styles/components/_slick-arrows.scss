@@ -1,0 +1,39 @@
+.slick-arrow-stylization {
+	.slick-prev, .slick-next {
+		width: 30px;
+		height: 30px;
+	}
+	.slick-prev:before, .slick-next:before {
+		font-family: "FontAwesome";
+		font-size: 30px;
+		line-height: 1;
+		color: $brand-primary;
+	}
+
+	.slick-prev {
+		left: -120px;
+	}
+
+	.slick-next {
+		right: -120px;
+	}
+
+	.slick-prev:before {
+		content: "\f053";
+	}
+
+	.slick-next:before {
+		content: "\f054";
+	}
+}
+
+@media only screen and (max-width: 1400px) {
+	.slick-arrow-stylization {
+		.slick-prev {
+			left: -50px;
+		}
+		.slick-next {
+			right: -50px;
+		}
+	}
+}

@@ -1,0 +1,253 @@
+.section-about{
+	&.-overlay50{
+		& .section-overlay-title{
+			top: 50%;
+			
+		}
+	}
+	&.-half_overlay{
+		padding: 0;
+		& .about{
+			&-item{
+				padding: 80px 0;
+				position: relative;
+			    &:before{
+			    	    content: '';
+					    display: block;
+					    position: absolute;
+					    border-top: 12px solid transparent;
+					    border-bottom: 12px solid transparent;
+					    border-left: 12px solid #fff;
+					    z-index: 99;
+					    left: 55%;
+					    top: 50%;
+			    }
+			    &.-right{
+					&:before{
+						left: inherit;
+						right: 55%;
+						border-left: 12px solid transparent;
+						border-right: 12px solid #fff;
+					}
+			    }
+			}
+		}
+	    & .container-fluid{
+		    & > .row:first-child {
+				padding-bottom: 0px;
+			}
+	    }
+	}
+	& .container-fluid{
+		& > .row:first-child {
+			padding-bottom: 140px;
+		}
+		&.-pd_bot_80{
+			& > .row:first-child {
+				padding-bottom: 80px;
+			}
+		}
+	}
+	& .about-img{
+		height: 0;
+		padding-bottom: 56.25%;
+		overflow: hidden;
+		& img {
+			width: 100%;
+			display: block;
+		}
+	}
+	& p {
+		position: relative;
+		z-index: 100;
+	}
+
+}
+.about{
+	&-bg_half{
+		position: absolute;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		width: 45%;
+	}
+	&-item{
+		&.-right{
+			& .about-bg_half{
+				right: inherit;
+				left: 0;
+			}
+		}
+	}
+	&-slider{
+		&_wrapper{
+		    margin-left: 13%;
+		    padding-top: 6%;
+		    padding-right: 6%;
+		    position: relative;
+
+		}
+		&-img{
+			margin-left: 6%;
+			box-shadow: 0 8px 15px rgba(0, 0, 0, 0.24), 0 26px 54px 5px rgba(0, 0, 0, 0.59);
+		}
+		&_img{
+		    height: 0;
+		    position: relative;
+		    overflow: hidden;
+		    padding-bottom: 47%;
+		    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.24), 0 26px 54px 5px rgba(0, 0, 0, 0.59);
+		    & .img{
+		    	position: absolute;
+			    left: 0;
+			    right: 0;
+			    top: 0;
+			    bottom: 0;
+			    width: 100%;
+			    height: 100%;
+			    background-size: cover;
+			    background-position: center center;
+		    }
+		}
+		&_item{
+			padding-left: 2%;
+    		padding-bottom: 1.7%;
+			position: relative;
+		}
+		&_text{
+		    position: absolute;
+	        left: -2%;
+		    max-width: 93%;
+		    bottom: -18%;
+		    & .slick-list{
+			    padding: 4% 7px;
+			}
+			& .slick-slide{
+				margin: 0 30px;
+			}
+		}
+		&_content{
+		    box-shadow: 0 22px 25px 10px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.11);
+		    background: #fff;
+	        padding: 8% 3% 7% 9%;
+   			 max-width: 56%;
+		}
+		& .slick-list{
+			padding-right: 35px;
+		}
+	}
+
+}
+@media screen and (max-height: 700px){
+	.about{
+		&.-slider{
+
+		}
+		&-slider_content{
+		    padding: 5% 3% 5% 5%;
+		}
+	}
+}
+@media screen and (max-width: 1400px){
+	.about{
+		&-slider{
+			&_content{
+				padding: 3%;
+			}
+		}
+	}
+	.section-about{
+		&.-half_single{
+			&  p{
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+@media screen and (max-width: 991px){
+	.section-about{
+		&.-half_overlay {
+			& .about-item{
+				padding: 10px 0;
+			}
+			
+		}
+		& .container-fluid > .row:first-child{
+				padding-bottom: 30px;
+		}
+		& .container-fluid{
+			&.-pd_bot_80{
+				& > .row:first-child {
+					padding-bottom: 30px;
+				}
+			}
+		}
+
+		
+	}
+	.about{
+		&-bg_half{
+			display: none;
+		}
+	}
+	.section-about{
+		&.-half_single{
+			min-height: 0;
+			background-image: none;
+			&:before{
+				display: none;
+			}
+			& .container-fluid{
+				position: static;
+				transform: none;
+			}
+		}
+		& p {
+			margin-bottom: 30px;
+		}
+	}
+	.about{
+		&-slider_wrapper{
+			margin: 0 -15px;
+			padding: 0;
+		}
+		&-slider-img{
+			margin-left: 0;
+		}
+		&-slider_text{
+			position: static;
+			margin-top: -200px;
+			max-width: 100%;
+			& .slick-list{
+				padding: 0;
+				padding-bottom: 55px;
+			}
+			& .slick-slide{
+				margin: 0 10px;
+			}
+		}
+		&-slider_content{
+			max-width: 100%;
+			padding: 30px;
+			box-shadow: 0 0px 20px 7px rgba(0, 0, 0, 0.3), 0 0 7px rgba(0, 0, 0, 0.11);
+		}
+	}
+	.slider-arrows.-about{
+	    bottom: 25px;
+    	right: 0%;
+	}
+}
+
+@media screen and (max-width: 767px){
+	.section-about p{
+		margin-bottom: 0;
+	}
+	.about{
+		&-slider_content{
+			padding: 15px;
+		}
+		&-slider_text{
+			margin-top: -50px;
+		}
+	}
+}

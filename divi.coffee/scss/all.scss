@@ -1,0 +1,244 @@
+/*------------------------------------------------------------------
+	Styles for bootstrap  V3.3.7
+-------------------------------------------------------------------*/
+
+ @import "./variables";
+ @import "./libs/bootstrap/stylesheets/bootstrap/mixins";
+ /* Reset and dependencies*/
+ @import "./libs/bootstrap/stylesheets/bootstrap/print";
+ @import "./libs/bootstrap/stylesheets/bootstrap/glyphicons";
+ /* Core CSS*/
+ @import "./libs/bootstrap/stylesheets/bootstrap/scaffolding";
+ @import "./libs/bootstrap/stylesheets/bootstrap/type";
+ @import "./libs/bootstrap/stylesheets/bootstrap/code";
+ @import "./libs/bootstrap/stylesheets/bootstrap/grid";
+ /*@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/tables";*/
+ @import "./libs/bootstrap/stylesheets/bootstrap/forms";
+ @import "./libs/bootstrap/stylesheets/bootstrap/buttons";
+ /* Components*/
+ @import "./libs/bootstrap/stylesheets/bootstrap/component-animations";
+ @import "./libs/bootstrap/stylesheets/bootstrap/dropdowns";
+ /*@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/button-groups";*/
+ @import "./libs/bootstrap/stylesheets/bootstrap/input-groups";
+ @import "./libs/bootstrap/stylesheets/bootstrap/navs";
+ @import "./libs/bootstrap/stylesheets/bootstrap/navbar";
+ @import "./libs/bootstrap/stylesheets/bootstrap/breadcrumbs";
+ @import "./libs/bootstrap/stylesheets/bootstrap/pagination";
+ /*@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/pager";*/
+ /*@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/labels";*/
+ /*@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/badges";*/
+ /*@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/jumbotron";*/
+ /*@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/thumbnails";*/
+ /*@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/alerts";*/
+ /*@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/progress-bars";*/
+ @import "./libs/bootstrap/stylesheets/bootstrap/media";
+ /*@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/list-group";*/
+ @import "./libs/bootstrap/stylesheets/bootstrap/panels";
+ @import "./libs/bootstrap/stylesheets/bootstrap/responsive-embed";
+ @import "./libs/bootstrap/stylesheets/bootstrap/wells";
+ @import "./libs/bootstrap/stylesheets/bootstrap/close";
+ /* Components w/ JavaScript*/
+ @import "./libs/bootstrap/stylesheets/bootstrap/modals";
+ /*@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/tooltip";*/
+ /*@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/popovers";*/
+ /* @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/carousel";*/
+ /* Utility classes*/
+ @import "./libs/bootstrap/stylesheets/bootstrap/utilities";
+ @import "./libs/bootstrap/stylesheets/bootstrap/responsive-utilities";
+
+
+
+
+
+/*------------------------------------------------------------------
+	Styles for Font Awesome 
+-------------------------------------------------------------------*/
+
+
+@import "./icons/font-awesome";
+
+
+
+/*------------------------------------------------------------------
+	Styles for plugins  
+-------------------------------------------------------------------*/
+
+@import './libs/slick/slick-theme.scss';
+@import './libs/slick/slick.scss';
+@import './libs/datetimepicker/bootstrap-datetimepicker-build.scss';
+@import './libs/bootstrap_select/variables.scss';
+@import './libs/bootstrap_select/bootstrap-select.scss';
+@import './libs//plugins/drawer.min.scss';
+@import './libs//plugins/jquery-ui.structure.min.scss';
+@import './libs//plugins/jquery-ui.theme.min.scss';
+@import './libs//plugins/gridNavigation.scss';
+@import './libs//plugins/slick-lightbox';
+@import './libs//plugins/slidebars';
+@import './libs/spinkit/spinners/11-folding-cube.scss';
+
+
+
+
+/*------------------------------------------------------------------
+	Styles for fonts  
+-------------------------------------------------------------------*/
+
+@import 'fonts/fonts';
+
+
+
+/*------------------------------------------------------------------
+	Styles for theme (modules)  
+-------------------------------------------------------------------*/
+
+@import 'reset';
+@import 'custom-bootstrap';
+@import 'components/header';
+@import 'components/lists';
+@import 'components/section';
+@import 'components/reservation';
+@import 'components/gallery';
+@import 'components/tabMenu';
+@import 'components/review';
+@import 'components/social';
+@import 'components/contacts';
+@import 'components/footer';
+@import 'components/about';
+@import 'components/floatImg';
+@import 'components/page_404';
+@import 'components/shop';
+@import 'components/product';
+@import 'components/filter-list';
+@import 'components/helpers';
+@import 'components/cart';
+@import 'components/checkout';
+@import 'components/comment';
+@import 'components/preloader';
+@import 'components/preview';
+
+/*------------------------------------------------------------------
+	Styles for Home page 6
+-------------------------------------------------------------------*/
+
+@import 'home_6_styles/variables';
+@import 'home_6_styles/components/typography';
+@import 'home_6_styles/components/buttons';
+@import 'home_6_styles/components/custom-grid';
+@import 'home_6_styles/components/header';
+@import 'home_6_styles/components/global';
+@import 'home_6_styles/components/slick-arrows';
+@import 'home_6_styles/components/slick-dots';
+@import 'home_6_styles/components/forms';
+@import 'home_6_styles/components/slick-lightbox-styles';
+@import 'home_6_styles/home_6';
+
+/*------------------------------------------------------------------
+	Styles for Home page 5
+-------------------------------------------------------------------*/
+
+@import 'home_5_styles/components/buttons';
+@import 'home_5_styles/components/custom-grid';
+@import 'home_5_styles/components/typography';
+@import 'home_5_styles/components/slick-dots';
+@import 'home_5_styles/components/global';
+@import 'home_5_styles/components/side-bar';
+@import 'home_5_styles/components/slick-arrows';
+@import 'home_5_styles/components/scrollbar_styles';
+@import 'home_5_styles/home_5';
+
+/*------------------------------------------------------------------
+	Styles for Home page 7
+-------------------------------------------------------------------*/
+
+@import 'home_7_styles/components/typography';
+@import 'home_7_styles/components/global';
+@import 'home_7_styles/home_7';
+
+
+
+
+
+
+
+
+/*------------------------------------------------------------------
+	Global styles
+-------------------------------------------------------------------*/
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  margin: 0;
+}
+body{
+	background-image: url(img/bg-body_wood_bg.png);
+}
+
+
+@media screen and (max-width: 991px){
+	body , .btn{
+		font-size: 18px;
+	}
+	p {
+		line-height: 26px;
+	}
+	h2 {
+		font-size: 55px;
+	}
+	h3{
+		font-size: 30px;
+	}
+	h4 {
+		font-size: 30px;
+	}
+}
+
+@media screen and (max-width: 767px){
+	body {
+		font-size: 16px;
+	}
+	.btn{
+		font-size: 16px;
+	}
+	p {
+		line-height: 24px;
+	}
+	h2 {
+		font-size: 50px;
+	}
+	h3{
+		font-size: 28px;
+	}
+	h4 {
+		font-size: 30px;
+	}
+}
+
+.tj_gallery{
+	& a {
+		/* max-width: 250px;*/
+		display: block;
+		height: 0;
+		padding-bottom: 80%;
+		overflow: hidden;
+		width: 250px;
+		margin:  0 10px;
+		position: relative;
+		margin-bottom: 10px;
+		opacity: 1;
+		box-shadow: 0 3px 32px rgba(0, 0, 0, 0.43), 0 21px 40px rgba(0, 0, 0, 0.58);
+	}
+	 & img {
+	 	/* display: block;*/
+	 	position: absolute;
+	 	opacity: 1 !important;
+	 	width: 100%;
+	 	height: 100%;
+	 	margin: 0;
+	 	padding: 0;
+	 	/* height: 150px;*/
+	 	/* max-width: 150px;*/
+	 }
+}

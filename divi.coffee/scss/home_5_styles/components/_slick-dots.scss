@@ -1,0 +1,35 @@
+.cup-dots {
+	.slick-dots li button {
+		font-size: 0;
+		border: none;
+		width: 20px;
+		height: 20px;
+		&:after {
+			content: "\f0f4";
+			display: inline-block;
+			font-family: "FontAwesome";
+			color: #676261;
+			font-size: 18px;
+			transition: 0.2s;
+		}
+		&:hover {
+			background-color: transparent;
+			&:after {
+				color: lighten(#676261, 15%);
+				transition: 0.2s;
+			}
+		}
+	}
+
+	.slick-dots .slick-active button {
+		background-color: transparent;
+		&:after {
+			color: $brand-primary;
+		}
+		&:hover {
+			&:after {
+				color: $brand-primary;
+			}
+		}
+	}
+}

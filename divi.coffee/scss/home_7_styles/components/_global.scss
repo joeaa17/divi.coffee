@@ -1,0 +1,59 @@
+.full-page-landing {
+	[canvas=container] {
+		overflow: hidden;
+	}
+
+	.section {
+		padding: 0;
+	}
+}
+
+@media screen and (max-width: 1199px), (max-height: 619px) {
+	.full-page-landing {
+		.section.section.section {
+			padding: 70px 0;
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.full-page-landing {
+		.section.section.section {
+			padding: 50px 0;
+		}
+
+		.container-fluid {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+
+}
+
+@media screen and (max-width: 767px) {
+	.full-page-landing {
+		.section.section.section {
+			padding: 40px 0;
+		}
+	}
+
+	.full-page-landing {
+		.title-alighn {
+			text-align: center;
+			.title-wrap {
+				display: inline-block;
+			}
+		}
+	}
+
+}
+
+@media screen and (max-width: 575px) {
+
+	.full-page-landing {
+		.section.section.section {
+			padding: 30px 0;
+		}
+	}
+
+}
