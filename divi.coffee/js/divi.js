@@ -83,13 +83,14 @@ var divi = {
 		alert("The address has been copied to your clipboard." );
 	},
 	shipping_change: function()	{
-		var shipping_cost = parseInt( divi.shipping[parseInt( $( "#ship_type" ).val() )] );
+		var shipping_cost = parseInt( divi.shipping[parseInt( $( "#ship_type" ).val() )].priceDIVI );
 		divi.total_to_pay = ( shipping_cost + divi.checkout_total );
 		$( "#shipping_cost" ).html( numberWithCommas( shipping_cost ) );
 		$( "#send_total" ).html( numberWithCommas( divi.total_to_pay ) );
 	},
 	get_paid: function()	{
 		if( !divi.paid_refresh )	{
+			divi.shipping_change();
 			divi.paid_refresh = window.setInterval( divi.get_paid, ( divi.paid_refresh_delay * 1000 ) );
 		}
 		$.post( "/index.php?get_paid", { cart: JSON.stringify( divi.cart ) }, function( data )	{

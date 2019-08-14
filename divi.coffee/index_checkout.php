@@ -4,10 +4,17 @@ if( !defined( "DIVI" ) )	{
 	exit();
 }
 $cart = $Web->get_cart();
-$shipping_costs = $Web->get_shipping_costs();
-$shipping_prices = array();
-
-if( sizeof( $cart ) > 0 )	{
+$weight = 0;
+for( $i = 0; $i < sizeof( $cart ); $i++ )	{
+	$weight += ( (int)$cart[$i]->weight * (int)$cart[$i]->qty );
+}
+$shipping_costs = $Web->get_shipping_costs( $weight );
+if( sizeof( $shipping_costs ) == 0 )	{
+	$onload = "window.setTimeout( function() { alert( \"Your order has too many products to be shipped, please remove something from your cart or contact customer service at dev@encke.cr.\" ); }, 1000 );";
+	include_once( "index_home.php" );
+}	else	{
+	$shipping_prices = array();
+	if( sizeof( $cart ) > 0 )	{
 ?>
 <section class="section section-title_top" style="background-image: linear-gradient(to top , rgba(0,0,0, 0.5) 0%, rgba(0,0,0,0.5) 100%) , url(img/img-second_bg.jpg); ">
     <div class="container-fluid">
@@ -37,7 +44,7 @@ if( sizeof( $cart ) > 0 )	{
 	                            <select class="form-control" name="ship_type" id="ship_type" required onchange="divi.shipping_change();">
 <?php
 for( $i = 0; $i < sizeof( $shipping_costs ); $i++ )	{
-	$shipping_prices[] = (int)$shipping_costs[$i]->cost;
+	$shipping_prices[] = (int)$shipping_costs[$i]->priceDIVI;
 	print( "<option value=\"" . (int)$i . "\"" . ( ( $i == 0 )? " selected=\"selected\"": "" ) . ">" . $shipping_costs[$i]->name . "</option>" );
 }
 ?>
@@ -53,7 +60,7 @@ for( $i = 0; $i < sizeof( $shipping_costs ); $i++ )	{
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="checkout-form_email">Email</label>
-                                        <input type="text" class="form-control" name="ship_email" placeholder="For shipping alert">
+                                        <input type="text" class="form-control" name="ship_email" placeholder="Contact for issues / alerts *" required>
                                     </div>
                                 </div>
                             </div>
@@ -93,7 +100,7 @@ for( $i = 0; $i < sizeof( $cart ); $i++ )	{
                         </table>
                         <div class="checkout-total clearfix">
                             <h5 class="checkout-total_title">products:<br/>shipping:</h5>
-                            <div class="checkout-total_price" style="text-align: right;"><?php print( number_format( $line, 0, "", "," ) ); ?><br/><span id="shipping_cost"><?php print( number_format( $shipping_costs[0], 0, "", "," ) ); ?></span></div>
+                            <div class="checkout-total_price" style="text-align: right;"><?php print( number_format( $Total, 0, "", "," ) ); ?><br/><span id="shipping_cost"><?php print( number_format( $shipping_costs[0], 0, "", "," ) ); ?></span></div>
                         </div>
                         <div class="checkout-total clearfix" id="send_total_lines">
                             <h5 class="checkout-total_title">send total:</h5>
@@ -130,6 +137,7 @@ divi.total_to_pay = <?php print( ( (float)$Total + $shipping_costs[0] ) ); ?>;
 window.onload = divi.get_paid;
 </script>
 <?php
-}	else	{
-	include_once( "index_home.php" );
+	}	else	{
+		include_once( "index_home.php" );
+	}
 }

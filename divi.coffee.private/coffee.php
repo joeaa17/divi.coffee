@@ -1,10 +1,10 @@
 <?php
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
-include_once( "../vendor/autoload.php" );
-include_once( "divicli.php" );
-include_once( "nXchange.php" );
-include_once( "encke_file.php" );
+include_once( "/vendor/autoload.php" );
+include_once( "/divi.coffee.private/divicli.php" );
+include_once( "/divi.coffee.private/nXchange.php" );
+include_once( "/divi.coffee.private/encke_file.php" );
 define( "DIVI", true );
 class CafeWeb	{
 	private $DB;
@@ -14,7 +14,7 @@ class CafeWeb	{
 	
 	public function __construct()	{
 		@session_start();
-		$this->DB = new mysqli( "localhost", "coffee", "coffee", "coffee" );
+		$this->DB = new mysqli( "localhost", "localhost", "localhost", "localhost" );
 		$this->DB->set_charset( "utf8" );
 		
 		$this->nXchange = new nXchange( false );
@@ -96,11 +96,13 @@ class CafeWeb	{
 		return $list;
 	}
 	
-	public function get_shipping_costs()	{
+	public function get_shipping_costs( $weight )	{
 		$list = array();
-		$sql = "SELECT `id`, `name`, `cost` FROM `shipping` ORDER BY `id`";
+		$sql = "SELECT `id`, `name`, `cost` FROM `shipping` WHERE ( `weight` = " . (int)$weight . " ) ORDER BY `id`";
 		if( $result = $this->DB->query( $sql ) )	{
 			while( $row = $result->fetch_object() )	{
+				$row->cost = (int)$row->cost;
+				$row->priceDIVI = ( (int)( $this->nXchange->convert( "crc", "divi", (int)$row->cost ) * 100 ) / 100 );
 				$list[] = $row;
 			}
 			$result->close();
@@ -119,30 +121,24 @@ class CafeWeb	{
 	}
 	
 	public function add_order( $cart, $ship_type, $ship_name, $ship_email, $ship_address, $payTo )	{
-		$shipping_costs = $this->get_shipping_costs();
 		$total = 0;
+		$weight = 0;
 		$cart_sql = array();
 		for( $i = 0; $i < sizeof( $cart ); $i++ )	{
 			$line = ( (int)$cart[$i]->priceDIVI * (int)$cart[$i]->qty );
 			$total += $line;
+			$weight += ( (int)$cart[$i]->weight * (int)$cart[$i]->qty );
 			$cart_sql[] = "( ORDER_ID, " . (int)$cart[$i]->id . ", " . (int)$cart[$i]->qty . ", " . (int)$cart[$i]->priceDIVI . ", " . (int)$line . " )";
 			
 		}
-		$sql = "INSERT INTO `orders` ( `added`, `ship_type`, `ship_name`, `ship_email`, `address`, `shipping_cost`, `total`, `paid`, `total_paid`, `canceled`, `removed`, `paid_to` ) VALUES ( UTC_TIMESTAMP(), " . (int)$shipping_costs[(int)$ship_type]->id . ", '" . addslashes( $ship_name ) . "', '" . addslashes( $ship_email ) . "', '" . addslashes( $ship_address ) . "', " . (int)$shipping_costs[(int)$ship_type]->cost . ", " . (int)$total . ", UTC_TIMESTAMP(), " . (int)$this->get_paid_to_divi_address( $payTo ) . ", 0, 0, '" . addslashes( $payTo ) . "' )";
+		$shipping_costs = $this->get_shipping_costs( $weight );
+		$sql = "INSERT INTO `orders` ( `added`, `ship_type`, `ship_name`, `ship_email`, `address`, `shipping_cost`, `total`, `paid`, `total_paid`, `canceled`, `removed`, `paid_to` ) VALUES ( UTC_TIMESTAMP(), " . (int)$shipping_costs[(int)$ship_type]->id . ", '" . addslashes( $ship_name ) . "', '" . addslashes( $ship_email ) . "', '" . addslashes( $ship_address ) . "', " . (int)$shipping_costs[(int)$ship_type]->priceDIVI . ", " . (int)$total . ", UTC_TIMESTAMP(), " . (int)$this->get_paid_to_divi_address( $payTo ) . ", 0, 0, '" . addslashes( $payTo ) . "' )";
 		$this->DB->query( $sql );
 		$order_id = (int)$this->DB->insert_id;
 		$sql = "INSERT INTO `order_items` ( `order_id`, `product_id`, `qty`, `price_ea`, `total` ) VALUES " . str_replace( "ORDER_ID", $order_id, implode( ",", $cart_sql ) );
 		$this->DB->query( $sql );
 		$cli = new DiviCLI();
-		$cli->withdrawl( $total - 1 );
-	}
-	
-	public function send_email()	{
-		
-		
-		$ship_email = "matthew@encke.cr";
-		
-		
+		$cli->withdrawl( $total + $shipping_costs[(int)$ship_type]->priceDIVI - 1 );
 		$mail = new PHPMailer( true );
 		try	{
 			$mail->setFrom( "sales@divi.coffee", "DIVI.coffee" );

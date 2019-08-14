@@ -1,6 +1,6 @@
 <?php
 class nXchange	{
-	private $data_file = "x";
+	private $data_file = "/divi.coffee/x";
 	
 	private $rates;
 	

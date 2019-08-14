@@ -56,17 +56,17 @@ if( $product )	{
                     <div class="product-inner_tabs">
                       <!-- Nav tabs -->
                       <ul class="nav nav-tabs" role="tablist">
-                        <li role="presentation" class="active"><a href="#product-inner_tab1" aria-controls="product-inner_tab1" role="tab" data-toggle="tab">Description</a></li>
-                        <li role="presentation"><a href="#product-inner_tab2" aria-controls="product-inner_tab2" role="tab" data-toggle="tab">Additional Information</a></li>
+                        <!--<li role="presentation"><a href="#product-inner_tab1" aria-controls="product-inner_tab1" role="tab" data-toggle="tab">Description</a></li>-->
+                        <li role="presentation" class="active"><a href="#product-inner_tab2" aria-controls="product-inner_tab2" role="tab" data-toggle="tab">Additional Information</a></li>
                       </ul>
 
                       <!-- Tab panes -->
                       <div class="tab-content">
-                        <div role="tabpanel" class="tab-pane active fade in" id="product-inner_tab1">
+                        <div role="tabpanel" class="tab-pane" id="product-inner_tab1">
                             <h5 class="product-descr_title"><?php print( $product->name ); ?></h5>
                             <p><?php print( $product->description ); ?></p>
                         </div>
-                        <div role="tabpanel" class="tab-pane" id="product-inner_tab2">
+                        <div role="tabpanel" class="tab-pane active fade in" id="product-inner_tab2">
                             <table class="product-info_table">
                                 <tbody>
                                   <tr>

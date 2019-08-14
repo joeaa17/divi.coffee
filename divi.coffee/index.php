@@ -3,7 +3,7 @@ if( (int)$_SERVER["SERVER_PORT"] != 443 )	{
 	header( "Location: https://divi.coffee/" );
 	exit();
 }
-include_once( "../divi.coffee.private/coffee.php" );
+include_once( "/divi.coffee.private/coffee.php" );
 $Web = new CafeWeb();
 if( isset( $_GET["get_paid"] ) && isset( $_SESSION["payTo"] ) )	{
 	print( (float)$Web->get_paid_to_divi_address( $_SESSION["payTo"] ) );
@@ -52,8 +52,8 @@ if( isset( $_GET["shop"] ) )	{
     <link rel="manifest" href="/img/favicons/manifest.json">
     <link rel="mask-icon" href="/img/favicons/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="/all.css?1">
-    <script src="/js/divi.js?5"></script>
+    <link rel="stylesheet" href="/all.css?10">
+    <script src="/js/divi.js?6"></script>
 </head>
 <body>
     <header class="header -scroll_white<?php print( ( $page == "fotos" )? " -black": "" ); ?>">

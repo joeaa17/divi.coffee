@@ -25,7 +25,7 @@ class DiviCLI	{
 								"MiningInfo" =>			"getmininginfo",
 								"MNStart" =>			"startmasternode",			//Value of the MN alias
 								"MNFund" =>				"fundmasternode",			//fundmasternode nkrackcurri copper
-								"MNAllocate" =>			"allocatefunds",			//allocatefunds masternode nkrackcurri copper
+								"MNAllocate" =>			"allocatefunds",			//allocatefunds masternode nkserverrackcurri copper
 								"MNStatus" =>			"getmasternodestatus",
 								"MNList" =>				"listmasternodes",
 								"MNWinners" =>			"getmasternodewinners",
@@ -33,9 +33,9 @@ class DiviCLI	{
 								"BCInfo" =>				"getblockchaininfo",
 								"BCCount" =>			"getblockcount",
 								"BCDifficulty" =>		"getdifficulty",
-								"BCBalance" =>			"getaddressbalance",		//$divi->format_address( "DR2y6GdMizKhptMjjoMFnjxk5BXRKmjeu9" )
-								"BCTransactions" =>		"getaddresstxids",			//$divi->format_address( "DR2y6GdMizKhptMjjoMFnjxk5BXRKmjeu9" )
-								"BCUTXO" =>				"getaddressutxos",			//$divi->format_address( "DR2y6GdMizKhptMjjoMFnjxk5BXRKmjeu9" )
+								"BCBalance" =>			"getaddressbalance",		//$divi->format_address( "DAdVunJnm432gkG67kHpD8WD1grwwjRwAT" )
+								"BCTransactions" =>		"getaddresstxids",			//$divi->format_address( "DAdVunJnm432gkG67kHpD8WD1grwwjRwAT" )
+								"BCUTXO" =>				"getaddressutxos",			//$divi->format_address( "DAdVunJnm432gkG67kHpD8WD1grwwjRwAT" )
 								"TXN" =>				"getrawtransaction",
 								"TXNDecode" =>			"decoderawtransaction",
 								"TXNData" =>			"gettransaction",			//transaction id to open
